@@ -1,52 +1,53 @@
 import React, { useState } from "react";
+import { BsPlusLg } from 'react-icons/bs';
+
 
 function CreateArea(props) {
-	const [note, setNote] = useState({
-		title: "",
-		content:""
+const [note, setNote] = useState({
+	title: "",
+	content: ""
+});
+
+function handleChange(event) {
+	const { name, value } = event.target;
+
+	setNote(prevNote => {
+		return {
+		...prevNote,
+		[name]: value
+		};
 	});
+}
 
+function submitNote(event) {
+	props.onAdd(note);
+	setNote({
+		title: "",
+		content: ""
+	});
+	event.preventDefault();
+}
 
-		function handleChange(event) {
-			const {name, value} = event.target
-			setNote(prevNote => {
-				return {
-					...prevNote,
-					[name]: value
-				};
-		});
-	}
-
-	function submitNote(event) {
-		props.onAdd(note)
-		event.preventDefault();
-		setNote({
-			title: "",
-			content:""
-		})
-	}
-
-	return (
-		<div>
-		<form>
-			<input 
-			value={note.title} 
-			onChange={handleChange} 
-			name="title" 
-			placeholder="Title"  
-
-			/>
-			<textarea 
-			value={note.content} 
-			onChange={handleChange} 
-			name="content" 
-			placeholder="Take a note..." 
-			rows="3" 
-			/>
-			<button onClick={submitNote}>Add</button>
+return (
+	<div>
+		<form className="create-note">
+		<input
+			name="title"
+			onChange={handleChange}
+			value={note.title}
+			placeholder="Title"
+		/>
+		<textarea
+			name="content"
+			onChange={handleChange}
+			value={note.content}
+			placeholder="Take a note..."
+			rows="3"
+		/>
+		<button onClick={submitNote}><BsPlusLg /></button>
 		</form>
-		</div>
-	);
+	</div>
+);
 }
 
 export default CreateArea;
