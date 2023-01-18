@@ -2,7 +2,7 @@
 📒 A replica of Google Keep created mainly using React.js. Took advantage of .jsx files which can be used to write HTML in the body of JavaScript. Further used CSS to style the page. User can add a title and the description of the note and can also delete the note.
 
 <h2>Idea</h2>
-To Create a simple version of Google Keep app
+To Create a simple version of Google Keep app <br>
 User can create a note with a title and cal also delete it afterwards
 <h2>Technologies</h2>
 Used HTML5, CSS3, JavaScript to develop the front-end
