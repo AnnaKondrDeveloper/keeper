@@ -21,3 +21,7 @@ Click on "Take a note..." placeholder.
 The text area gets expanded and a "+" button to add the note also appears. The user now have an option to add a title as well
 When user enters something in the note and click on "+", a new tile of note gets created with a delete button
 A user can also delete the note when they click on the delete button
+
+<h2>Screenshots</h2>
+
+![image](https://user-images.githubusercontent.com/85047120/213553494-e3fb9bd0-0bd7-47d5-b7e6-dea126da7e10.jpg)
